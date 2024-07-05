@@ -7,7 +7,7 @@ The first element of the tuple is the string k
 from typing import Tuple, Union
 
 
-def to_kv(k: str, v: Union[int, float]) -> tuple:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """
     returns a tuple
     first element of the tuple is string k
