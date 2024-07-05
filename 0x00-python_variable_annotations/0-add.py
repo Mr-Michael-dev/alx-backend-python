@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-""" Write a type-annotated function add that takes a float as arguments
-and returns a float"""
+"""
+Write a type-annotated function add that takes a float as arguments
+and returns a float
+"""
 
 def add(a: float, b: float) -> float:
     """
