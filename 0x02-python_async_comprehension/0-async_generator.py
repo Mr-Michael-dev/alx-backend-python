@@ -4,9 +4,10 @@ A coroutine that yields random numbers asynchronously
 """
 import asyncio
 import random
+from typing import AsyncGenerator
 
 
-async def async_generator():
+async def async_generator() -> AsyncGenerator[float, None]:
     """
     yields random number asynchronously
     """
