@@ -21,13 +21,13 @@ from utils import (
 class TestAccessNestedMap(unittest.TestCase):
     """Test class to test access_nested_map"""
     @parameterized.expand([
-        ({"a": 1}, ("a",)),
-        ({"a": {"b": 2}}, ("a",)),
-        ({"a": {"b": 2}}, ("a", "b")),
+        ({"a": 1}, ("a",), 1),
+        ({"a": {"b": 2}}, ("a",), {"b": 2}),
+        ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
     def test_access_nested_map(self,
                                nested_map: Mapping,
-                               path: Sequence) -> Any:
+                               path: Sequence,
+                               expected: Any) -> None:
         """Test access_nested_map"""
-        self.assertEqual(access_nested_map(
-            nested_map, path), nested_map[path[0]])
+        self.assertEqual(access_nested_map(nested_map, path), expected)
